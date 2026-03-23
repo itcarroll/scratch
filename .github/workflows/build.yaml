@@ -10,7 +10,7 @@ jobs:
       - name: Verify secrets
         run: |
           if [[ "${{ secrets.TEST }}" != "testabc" ]]; then
-            echo "Secret is not okay"
+            echo "Secret is not okay!"
             exit 1
           fi
-          echo "Secret is okay"
+          echo "Secret is okay!"
