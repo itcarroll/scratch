@@ -2,8 +2,9 @@ name: Test caller
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
-    
