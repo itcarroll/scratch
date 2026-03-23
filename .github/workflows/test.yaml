@@ -6,3 +6,4 @@ on:
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
+    secrets: inherit
