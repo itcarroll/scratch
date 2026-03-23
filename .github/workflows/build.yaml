@@ -8,4 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verify secrets
-        run: echo "Secret is correct: ${{ secrets.TEST == 'testabc' }}"
+        run: |
+          if [ "${{ secrets.TEST }}" == "testabc"]; then
+            echo "Secret is not okay"
+            exit 1
+          fi
+          echo "Secret is available"
