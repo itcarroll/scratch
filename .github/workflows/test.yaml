@@ -1,0 +1,9 @@
+name: Test caller
+
+on:
+  push:
+
+jobs:
+  call:
+    uses: ./.github/workflows/build.yaml
+    
