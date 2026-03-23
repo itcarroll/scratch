@@ -2,11 +2,15 @@ name: Build container image
 
 on:
   workflow_call:
-
+    inputs:
+      environment:
+        type: string
+        description: environment to deploy to
+        required: true
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: container
+    environment: ${{ inputs.environment }}
     steps:
       - name: Verify secrets
         run: |
