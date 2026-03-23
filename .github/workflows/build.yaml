@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Verify secrets
         run: |
-          if [[ "${{ secrets.TEST }}" == "testabc" ]]; then
+          if [[ "${{ secrets.TEST }}" != "testabc" ]]; then
             echo "Secret is not okay"
             exit 1
           fi
