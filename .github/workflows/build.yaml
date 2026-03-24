@@ -7,6 +7,7 @@ on:
         type: string
         description: environment to deploy to
         required: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
