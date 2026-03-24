@@ -6,5 +6,6 @@ on:
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
-    with:
-      environment: container
+    environment: container
+    # with:
+    #   environment: container
