@@ -12,8 +12,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # environment: container
+    environment: container
     steps:
+      - name: Verify environment
+        run: |
+          echo "$GITHUB_CONTEXT"
       - name: Verify secrets
         run: |
           if [[ "${{ secrets.TEST }}" != "testxyz" ]]; then
