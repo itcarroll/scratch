@@ -6,3 +6,5 @@ on:
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
+    with:
+      environment: abc
