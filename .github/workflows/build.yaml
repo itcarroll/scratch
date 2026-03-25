@@ -1,13 +1,14 @@
 name: Build container image
 
 on:
-  workflow_dispatch:
   workflow_call:
     secrets:
       test:
+        type: string
         required: false
     inputs:
       environment:
+        type: string
         required: true
 
 jobs:

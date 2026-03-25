@@ -10,5 +10,3 @@ jobs:
       environment: container
     secrets:
       test: ${{ secrets.TEST }}
-    # with:
-    #   environment: container
