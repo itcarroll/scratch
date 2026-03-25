@@ -14,9 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: container
     steps:
-      - name: Verify environment
-        run: |
-          echo "$GITHUB_CONTEXT"
+      - name: Print secrets
+        run: echo "${{ secrets }}"
       - name: Verify secrets
         run: |
           if [[ "${{ secrets.TEST }}" != "testxyz" ]]; then
