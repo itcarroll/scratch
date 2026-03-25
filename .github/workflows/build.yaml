@@ -3,6 +3,9 @@ name: Build container image
 on:
   workflow_dispatch:
   workflow_call:
+    secrets:
+      test:
+        required: true
     # inputs:
     #   environment:
     #     type: string
@@ -16,7 +19,7 @@ jobs:
     steps:
       - name: Verify secrets
         run: |
-          if [[ "${{ secrets.call_test }}" != "testxyz" ]]; then
+          if [[ "${{ secrets.test }}" != "testxyz" ]]; then
             echo "Secret is not okay!"
             exit 1
           fi

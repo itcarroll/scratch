@@ -7,6 +7,6 @@ jobs:
   call:
     uses: ./.github/workflows/build.yaml
     secrets:
-      call_test: ${{ secrets.TEST }}
+      test: ${{ secrets.TEST }}
     # with:
     #   environment: container
