@@ -4,7 +4,11 @@ on:
   push:
 
 jobs:
-  call:
+
+  cache:
+    uses: ./.github/workflows/build.yaml
+
+  deploy:
     uses: ./.github/workflows/build.yaml
     with:
       environment: container

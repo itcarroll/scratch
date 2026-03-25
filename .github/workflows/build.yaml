@@ -8,7 +8,7 @@ on:
     inputs:
       environment:
         type: string
-        required: true
+        required: false
 
 jobs:
   build:
