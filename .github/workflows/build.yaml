@@ -4,7 +4,6 @@ on:
   workflow_call:
     secrets:
       test:
-        type: string
         required: false
     inputs:
       environment:
