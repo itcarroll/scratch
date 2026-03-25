@@ -14,11 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: container
     steps:
-      - name: Print secrets
-        run: echo "${{ secrets }}"
       - name: Verify secrets
         run: |
-          if [[ "${{ secrets.TEST }}" != "testxyz" ]]; then
+          if [[ "${{ secrets.call_test }}" != "testxyz" ]]; then
             echo "Secret is not okay!"
             exit 1
           fi

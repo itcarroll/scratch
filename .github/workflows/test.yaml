@@ -6,6 +6,7 @@ on:
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
-    secrets: inherit
+    secrets:
+      call_test: ${{ secrets.TEST }}
     # with:
     #   environment: container
