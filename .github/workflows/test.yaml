@@ -6,6 +6,8 @@ on:
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
+    with:
+      environment: container
     secrets:
       test: ${{ secrets.TEST }}
     # with:
