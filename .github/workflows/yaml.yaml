@@ -1,0 +1,22 @@
+name: Test yaml string parsing
+
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  echo-a:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo over linebreaks
+        run: >
+          echo "a string
+            with an indent"
+  echo-b:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo over linebreaks
+        run: >
+          echo "a string
+          with no indent"
