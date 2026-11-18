@@ -1,0 +1,8 @@
+version: 1
+project:
+  title: itcarroll's scratch book
+  github: itcarroll/scratch.git
+  toc:
+    - file: hello.md
+site:
+  template: book-theme
