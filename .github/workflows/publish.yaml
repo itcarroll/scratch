@@ -1,0 +1,10 @@
+name: Publish
+on:
+  - push
+  - workflow-dispatch
+jobs:
+  build:
+    runs-on:
+      - codebuild-icarroll-test-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: echo "Hello World"
